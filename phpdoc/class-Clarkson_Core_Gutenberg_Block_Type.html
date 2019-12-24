@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Clarkson_Core_Gutenberg_Block_Type</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Clarkson_Core_Gutenberg_Block_Manager.html">Clarkson_Core_Gutenberg_Block_Manager</a></li>
+				<li class="active"><a href="class-Clarkson_Core_Gutenberg_Block_Type.html">Clarkson_Core_Gutenberg_Block_Type</a></li>
+				<li><a href="class-Clarkson_Core_Objects.html">Clarkson_Core_Objects</a></li>
+				<li><a href="class-Clarkson_Core_Templates.html">Clarkson_Core_Templates</a></li>
+				<li><a href="class-Clarkson_Object.html">Clarkson_Object</a></li>
+				<li><a href="class-Clarkson_Term.html">Clarkson_Term</a></li>
+				<li><a href="class-Clarkson_User.html">Clarkson_User</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Clarkson_Core_Gutenberg_Block_Type</h1>
+
+
+	<div class="description">
+	<p>This custom block overwrites the render callback to use twig files.
+It is automatically injected into all registered blocks at render time.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+WP_Block_Type
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Clarkson_Core_Gutenberg_Block_Type</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> CLARKSON\Lib<br>
+
+			<b>Located at</b> <a href="source-class-Clarkson_Core_Gutenberg_Block_Type.html#9-98" title="Go to source code">clarkson-core-gutenberg-block-type.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Clarkson_Core_Gutenberg_Block_Type.html#14-25" title="Go to source code">__construct</a>( <span>string <var>$block_type</var></span>, <span>array|string <var>$args</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+		<div class="description short">
+			<p>Replaces the original block render function, and saves the original render
+function in case we can't find a fitting twig file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Replaces the original block render function, and saves the original render
+function in case we can't find a fitting twig file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$block_type</var></dt>
+					<dd>Block type name including namespace.</dd>
+					<dt><var>$args</var></dt>
+					<dd>Optional. Array or string of arguments for registering a block type.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_twig_template_path" id="_get_twig_template_path">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_twig_template_path">#</a>
+		<code><a href="source-class-Clarkson_Core_Gutenberg_Block_Type.html#27-70" title="Go to source code">get_twig_template_path</a>( )</code>
+
+		<div class="description short">
+			<p>Allows filtering of the path where this blocks twig file is found.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Allows filtering of the path where this blocks twig file is found.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clarkson_render_callback" id="_clarkson_render_callback">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clarkson_render_callback">#</a>
+		<code><a href="source-class-Clarkson_Core_Gutenberg_Block_Type.html#72-97" title="Go to source code">clarkson_render_callback</a>( <span>array <var>$attributes</var></span>, <span>string <var>$content</var></span> )</code>
+
+		<div class="description short">
+			<p>Tries to find a twig file to use for rendering. If the twig file doesn't
+exists it falls back to the original render callback.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Tries to find a twig file to use for rendering. If the twig file doesn't
+exists it falls back to the original render callback.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$attributes</var></dt>
+					<dd>Block attributes.</dd>
+					<dt><var>$content</var></dt>
+					<dd>Block content.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>Rendered block type output.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?195f586f8001083edc6e83a5d575afed3f8117b9"></script>
+<script src="elementlist.js?f88d828d3299dbdaa82a14420a69822fe9d0a2f3"></script>
+</body>
+</html>
